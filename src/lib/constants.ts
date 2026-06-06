@@ -1,0 +1,25 @@
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:3000'
+
+export const QUERY_KEYS = {
+  AUTH_ME: ['auth', 'me'],
+  BUYER_TENDERS: ['buyer', 'tenders'],
+  BUYER_TENDER: (id: string) => ['buyer', 'tenders', id],
+  BUYER_TENDER_PROPOSALS: (id: string) => ['buyer', 'tenders', id, 'proposals'],
+  BUYER_PROPOSAL: (id: string) => ['buyer', 'proposals', id],
+  BUYER_PROPOSAL_NEGOTIATIONS: (id: string) => ['buyer', 'proposals', id, 'negotiations'],
+  SUPPLIER_TENDERS: ['supplier', 'tenders'],
+  SUPPLIER_TENDER: (id: string) => ['supplier', 'tenders', id],
+  SUPPLIER_PROPOSALS: ['supplier', 'proposals'],
+  SUPPLIER_PROPOSAL: (id: string) => ['supplier', 'proposals', id],
+  SUPPLIER_PROPOSAL_NEGOTIATIONS: (id: string) => ['supplier', 'proposals', id, 'negotiations'],
+  ADMIN_ACCOUNTS: ['admin', 'accounts'],
+  ADMIN_ACCOUNTS_PENDING: ['admin', 'accounts', 'pending'],
+  ADMIN_ACCOUNT: (id: string) => ['admin', 'accounts', id],
+  ADMIN_TENDERS: ['admin', 'tenders'],
+  ADMIN_TENDERS_PENDING: ['admin', 'tenders', 'pending'],
+  ADMIN_TENDER: (id: string) => ['admin', 'tenders', id],
+  ADMIN_PROPOSAL: (id: string) => ['admin', 'proposals', id],
+  ADMIN_PROPOSAL_NEGOTIATIONS: (id: string) => ['admin', 'proposals', id, 'negotiations'],
+  ADMIN_ROLES: ['admin', 'roles'],
+  ADMIN_PERMISSIONS: ['admin', 'permissions'],
+} as const
